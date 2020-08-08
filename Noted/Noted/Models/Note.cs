@@ -12,5 +12,9 @@ namespace Noted.Models
         public string Title { get; set; }
         public string Content { get; set; }
         public DateTimeOffset DateCreated { get; set; }
+        public string CreatedAt
+        {
+            get => this.DateCreated.ToLocalTime().ToString("dddd, d MMMM, yyyy \"at\" h:mm tt");
+        } 
     }
 }
